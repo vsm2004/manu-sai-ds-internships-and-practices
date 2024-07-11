@@ -13,7 +13,7 @@ merged = pd.concat([q.drop(['Sex', 'Embarked'], axis=1), dummies], axis=1)
 X = merged.drop('Survived', axis='columns')
 y = merged['Survived']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25,random_state=5)
-model = LogisticRegression(C=0.01, max_iter=1500)
+model = LogisticRegression(C=0.01, max_iter=15000)
 model.fit(X_train, y_train)
 accuracy = model.score(X_test, y_test)
 print(accuracy)

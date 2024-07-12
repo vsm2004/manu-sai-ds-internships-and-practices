@@ -12,7 +12,7 @@ le = LabelEncoder()
 y_encod = le.fit_transform(y)
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y_encod, test_size=0.2)
-model = RandomForestClassifier()
+model = RandomForestClassifier(n_estimators=10000)
 model.fit(X_train, y_train)
 print(model.predict([[5,3,1.4,0.6]]))
 y_pred = model.predict(X_test)
@@ -24,6 +24,5 @@ plt.xlabel('Predicted labels')
 plt.ylabel('True labels')
 plt.title('Confusion Matrix')
 plt.show()
-model.predict([[5,3,1.4,0.6]])
 
 

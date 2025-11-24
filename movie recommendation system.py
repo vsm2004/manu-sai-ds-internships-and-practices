@@ -38,7 +38,7 @@ films['keywords']=films['keywords'].apply(lambda x:[i.replace(" ","") for i in x
 films['cast']=films['cast'].apply(lambda x:[i.replace(" ","") for i in x])
 films['crew']=films['crew'].apply(lambda x:[i.replace(" ","") for i in x])
 films['tags']=films['overview']+films['genres']+films['keywords']+films['cast']+films['crew']
-films_df=films[['movie_id','title','tags']]
+films_df = films[['movie_id','title','tags']].copy()
 films_df['tags']=films_df['tags'].apply(lambda x:" ".join(x))
 films_df['tags']=films_df['tags'].apply(lambda x:x.lower())
 import nltk

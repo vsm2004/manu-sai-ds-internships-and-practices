@@ -51,4 +51,5 @@ if st.button('Predict'):
     if result == 1:
         st.header("Spam")
     else:
+#web page available at:    "http://localhost:8501/"
         st.header("Not Spam")

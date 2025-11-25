@@ -23,4 +23,6 @@ if st.button('Recommend'):
     recommendations = recommend(selected_movie_name)
     st.subheader("Recommended Movies:")
     for movie in recommendations:
+
         st.write("👉", movie)
+# web page is available at : http://localhost:8501/
